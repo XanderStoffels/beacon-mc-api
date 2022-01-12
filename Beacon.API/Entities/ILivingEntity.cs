@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Beacon.API
+namespace Beacon.API.Entities
 {
-    public interface IPlayer
+    public interface ILivingEntity : IEntity
     {
     }
 }

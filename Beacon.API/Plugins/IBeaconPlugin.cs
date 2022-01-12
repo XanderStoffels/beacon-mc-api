@@ -11,9 +11,9 @@ namespace Beacon.API.Plugins
     {
         public string Name { get; }
         public Version Version { get; }
-        public void RegisterServices(IServiceCollection services);
-        public ValueTask Enable();
-        public ValueTask Disable();
+        public void ConfigureServices(IServiceCollection services);
+        public ValueTask EnableAsync();
+        public ValueTask DisableAsync();
 
     }
 }

@@ -1,15 +1,14 @@
-﻿using Beacon.API.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Beacon.API.Events;
+using Beacon.API.Models;
 
 namespace Beacon.API
 {
     public interface IServer
     {
+        public IMinecraftEventBus EventBus { get; }
         Task StartAsync(CancellationToken cancelToken);
+        ValueTask ReloadAsync();
         ValueTask<ServerStatus> GetStatusAsync();
+        //test
     }
 }
