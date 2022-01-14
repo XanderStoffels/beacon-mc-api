@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Beacon.API.Events;
 
-namespace Beacon.API.Events
+public abstract class MinecraftEvent
 {
-    public abstract class MinecraftEvent
+    public IServer Server { get; }
+
+    protected MinecraftEvent(IServer server)
     {
-        public bool IsCancelled { get; set; }
+        Server = server;
     }
 }
