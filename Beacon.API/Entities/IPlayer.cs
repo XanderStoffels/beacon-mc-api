@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Beacon.API.Commands;
 
-namespace Beacon.API.Entities
+namespace Beacon.API.Entities;
+
+public interface IPlayer : ILivingEntity, ICommandSender
 {
-    public interface IPlayer : ILivingEntity
-    {
-    }
 }
