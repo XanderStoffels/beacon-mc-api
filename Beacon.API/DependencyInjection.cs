@@ -15,9 +15,9 @@ public static class DependencyInjection
     }
 
     public static IServiceCollection AddCommand<TCommand>(this IServiceCollection services)
-        where TCommand : class, ICommand
+        where TCommand : BeaconCommand
     {
-        services.AddSingleton<ICommand, TCommand>();
+        services.AddSingleton<BeaconCommand, TCommand>();
         return services;
     }
 
