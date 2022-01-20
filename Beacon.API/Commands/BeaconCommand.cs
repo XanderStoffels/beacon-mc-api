@@ -62,7 +62,7 @@ namespace Beacon.API.Commands
         protected virtual void RegisterSubCommands() { }
         protected async virtual ValueTask<bool> HandleAsync(ICommandSender sender, string[] args, CancellationToken cToken = default)
         {
-            await sender.SendMessageAsync("Incomplete command!");
+            await sender.SendMessageAsync("Invalid command!");
             await sender.SendMessageAsync($"Available sub-command: {string.Join(", ", _subcommands.Keys)}");
             return false;
         }

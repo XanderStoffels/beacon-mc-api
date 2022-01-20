@@ -6,6 +6,7 @@ namespace Beacon.API
 {
     public interface IServer
     {
+        public Version Version { get; }
         public ILogger<IServer> Logger { get; }
         public IMinecraftEventBus EventBus { get; }
 
